@@ -1,0 +1,7 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:my_first_code,org.eclipse.launchbar.core.descriptorType.default\:001Led_On,org.eclipse.launchbar.core.descriptorType.default\:002Led_Button,org.eclipse.launchbar.core.descriptorType.default\:003Led_Button_Interrupt,org.eclipse.launchbar.core.descriptorType.default\:004Decimal_to_binary_Led,org.eclipse.launchbar.core.descriptorType.default\:005Button_counter_in_binary
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:my_first_code/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:my_first_code/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

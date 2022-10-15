@@ -1,0 +1,34 @@
+#include <msp430.h> 
+
+
+/**
+ * main.c
+ */
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	
+    /*Set Ports*/
+
+	//Configure LED1
+    P1DIR |= BIT0;        //set pin P1.0 as output
+    P1OUT &= ~(BIT0);     //Clear bit of P1.0
+
+    //Configure User Button(P1.3 in MSP430G2353)
+    P1DIR &= ~BIT0;       //Configure  P1.3 as input
+    P1REN |=  BIT3;       //Enable the pull up or down resistor
+    P1OUT |=  BIT3;       //Enable the pull up resistor, if button is pressed input will read 0
+
+
+    while(1)
+    {
+        if(!(P1IN & (BIT3)))
+        {
+            P1OUT |= BIT0;  //Toggle the LED1
+        }
+        else
+        {
+            P1OUT &= ~BIT0;  //Toggle the LED1
+        }
+    }
+}
